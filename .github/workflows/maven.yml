@@ -7,6 +7,7 @@ on:
     branches: [ main, "[0-9]+.[0-9]+" ]
   pull_request:
     branches: [ "**" ]
+  workflow_dispatch:   # manual run on any branch: gh workflow run maven.yml --ref <branch>
 
 jobs:
   build:
