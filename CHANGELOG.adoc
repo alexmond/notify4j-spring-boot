@@ -2,9 +2,9 @@
 
 Each Spring Boot line has its own entries. Versions are `<boot-version>.<revision>`.
 
-== 4.1.1.1 (unreleased)
+== 4.0.8.1 (unreleased)
 
-* First release from the `notify4j-spring-boot` repo, on Spring Boot 4.1.1.
+* First release from the `notify4j-spring-boot` repo, on Spring Boot 4.0.8.
 * The starter was split out of the https://github.com/alexmond/notify4j[notify4j] repo so it can
   be released per Spring Boot line. The Maven coordinates
   (`org.alexmond:notify4j-spring-boot-starter`), the Java package (`org.alexmond.notify4j.spring`)
