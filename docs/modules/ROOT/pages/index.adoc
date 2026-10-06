@@ -1,0 +1,42 @@
+= notify4j Spring Boot starter
+:description: Spring Boot starter for notify4j — binds notify4j.* properties and auto-configures the Notifications facade. Released per Spring Boot line.
+
+The Spring Boot starter for {engine-docs}/index.html[notify4j]. It binds the `notify4j.*`
+properties and auto-configures the `Notifications` facade once your application provides a
+`NotificationAdapter` bean.
+
+== Spring Boot compatibility
+
+The starter version tracks the Spring Boot version it is built against:
+`<boot-version>.<revision>`. Pick the line that matches your application.
+
+[cols="1,1,1",options="header"]
+|===
+| Starter | Spring Boot | notify4j-core
+
+| 4.1.1.x | 4.1.x | 1.1.1
+| 4.0.8.x | 4.0.x | 1.1.1
+|===
+
+Starter versions up to `1.1.1` were released from the notify4j repo, on Spring Boot 4.0.
+
+== Add the dependency
+
+[source,xml,subs="attributes+"]
+----
+<dependency>
+    <groupId>org.alexmond</groupId>
+    <artifactId>notify4j-spring-boot-starter</artifactId>
+    <version>{page-component-version}</version>
+</dependency>
+----
+
+The starter pulls in `notify4j-core`. Email and Micrometer metrics are optional: add
+`spring-boot-starter-mail` or a `MeterRegistry` to turn them on.
+
+== Next
+
+* {engine-docs}/getting-started.html[Getting started] — adapter, channels and your first notification.
+* {engine-docs}/configuration.html[Configuration] — every `notify4j.*` property and the channel-URL reference.
+* {engine-docs}/architecture.html[Architecture] — the core concepts.
+* API reference: {api-starter}/{page-component-version}/index.html[notify4j-spring-boot-starter] · {api-core}/index.html[notify4j-core].

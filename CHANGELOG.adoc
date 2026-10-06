@@ -1,0 +1,16 @@
+= Changelog
+
+Each Spring Boot line has its own entries. Versions are `<boot-version>.<revision>`.
+
+== 4.1.1.1 (unreleased)
+
+* First release from the `notify4j-spring-boot` repo, on Spring Boot 4.1.1.
+* The starter was split out of the https://github.com/alexmond/notify4j[notify4j] repo so it can
+  be released per Spring Boot line. The Maven coordinates
+  (`org.alexmond:notify4j-spring-boot-starter`), the Java package (`org.alexmond.notify4j.spring`)
+  and the `notify4j.*` properties are unchanged; only the version scheme changed.
+* Builds against `notify4j-core` 1.1.1, pinned by the `notify4j.version` property.
+* The starter is no longer listed in `notify4j-bom`. Declare its version directly.
+
+For releases up to `1.1.1`, see the
+https://github.com/alexmond/notify4j/blob/main/CHANGELOG.adoc[notify4j changelog].

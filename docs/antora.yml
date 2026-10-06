@@ -1,0 +1,18 @@
+name: notify4j-spring-boot
+title: notify4j Spring Boot
+version: true
+start_page: ROOT:index.adoc
+asciidoc:
+  attributes:
+    # The starter's API docs are version-composed: {api-starter}/{page-component-version}/...
+    api-starter: 'https://javadoc.io/doc/org.alexmond/notify4j-spring-boot-starter'
+    # The core is published from the separate notify4j repo on plain semver, so its links are
+    # NOT composed with {page-component-version}.
+    api-core: 'https://javadoc.io/doc/org.alexmond/notify4j-core/latest'
+    engine-docs: 'https://www.alexmond.org/notify4j/current'
+    toc: left
+    sectnums: ''
+    author: 'Alexander Mondshain'
+    email: 'alex.mondshain@gmail.com'
+nav:
+  - modules/ROOT/nav.adoc
