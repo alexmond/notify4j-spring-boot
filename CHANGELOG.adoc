@@ -2,7 +2,7 @@
 
 Each Spring Boot line has its own entries. Versions are `<boot-version>.<revision>`.
 
-== 4.0.8.1 (unreleased)
+== 4.0.8.1 (2026-10-06)
 
 * First release from the `notify4j-spring-boot` repo, on Spring Boot 4.0.8.
 * The starter was split out of the https://github.com/alexmond/notify4j[notify4j] repo so it can
