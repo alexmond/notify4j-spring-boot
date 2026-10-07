@@ -26,6 +26,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write   # push the release commit + tag, create the GitHub release
+    # Inputs go through env, never inline in a `run` script.
+    env:
+      BRANCH: ${{ github.event.inputs.branch }}
+      RELEASE_VERSION: ${{ github.event.inputs.releaseVersion }}
+      NEXT_VERSION: ${{ github.event.inputs.nextVersion }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -52,19 +57,19 @@ jobs:
 
       - name: Set Release Version
         run: |
-          ./mvnw versions:set -DnewVersion=${{ github.event.inputs.releaseVersion }} -Pdefault --no-transfer-progress
+          ./mvnw versions:set -DnewVersion="$RELEASE_VERSION" -Pdefault --no-transfer-progress
           # Keep the README install snippet in sync with the release (versions:set only touches
           # the POMs). It is the only <version> tag in the README. The Antora docs use
           # {page-component-version}, which resolves to the pinned tag automatically.
-          sed -i -E "s#<version>[0-9][0-9.]*(-SNAPSHOT)?</version>#<version>${{ github.event.inputs.releaseVersion }}</version>#" README.adoc
+          sed -i -E "s#<version>[0-9][0-9.]*(-SNAPSHOT)?</version>#<version>$RELEASE_VERSION</version>#" README.adoc
 
       - name: Verify Build
         run: ./mvnw --batch-mode verify -Pdefault --no-transfer-progress
 
       - name: Commit and Tag Release
         run: |
-          git commit -am "Prepare release ${{ github.event.inputs.releaseVersion }}"
-          git tag -a ${{ github.event.inputs.releaseVersion }} -m "Release ${{ github.event.inputs.releaseVersion }}"
+          git commit -am "Prepare release $RELEASE_VERSION"
+          git tag -a "$RELEASE_VERSION" -m "Release $RELEASE_VERSION"
 
       - name: Deploy to Maven Central
         run: ./mvnw --batch-mode clean deploy -Prelease -Dgpg.passphrase="${GPG_PASSPHRASE}" --no-transfer-progress
@@ -75,12 +80,10 @@ jobs:
 
       - name: Set Next Development Version
         run: |
-          ./mvnw versions:set -DnewVersion=${{ github.event.inputs.nextVersion }} -Pdefault --no-transfer-progress
-          git commit -am "Prepare for next development iteration: ${{ github.event.inputs.nextVersion }}"
+          ./mvnw versions:set -DnewVersion="$NEXT_VERSION" -Pdefault --no-transfer-progress
+          git commit -am "Prepare for next development iteration: $NEXT_VERSION"
 
       - name: Push Changes
-        env:
-          BRANCH: ${{ github.event.inputs.branch }}
         run: git push origin "$BRANCH" && git push origin --tags
 
       - name: Create GitHub Release
