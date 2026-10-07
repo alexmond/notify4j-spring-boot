@@ -7,7 +7,7 @@
 
     <groupId>org.alexmond</groupId>
     <artifactId>notify4j-spring-boot-parent</artifactId>
-    <version>4.0.8.1</version>
+    <version>4.0.8.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>notify4j-spring-boot-parent</name>
     <description>Spring Boot integration for notify4j — the starter that binds notify4j.* properties
