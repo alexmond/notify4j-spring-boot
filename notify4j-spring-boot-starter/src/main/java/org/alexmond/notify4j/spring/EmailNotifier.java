@@ -39,6 +39,7 @@ public class EmailNotifier<E> extends AbstractEventNotifier<E> {
 	private final TransitionFilter filter;
 
 	/**
+	 * Creates the email channel.
 	 * @param mailSender Spring mail sender (SMTP from {@code spring.mail.*})
 	 * @param from from address; {@code null}/blank falls back to the mail defaults
 	 * @param to recipients; the channel is inactive while empty
