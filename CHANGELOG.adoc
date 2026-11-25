@@ -2,6 +2,12 @@
 
 Each Spring Boot line has its own entries. Versions are `<boot-version>.<revision>`.
 
+== 4.0.10.1 (unreleased)
+
+* Builds on Spring Boot 4.0.10.
+* Build: Checkstyle 10.12.4 and spring-javaformat 0.0.48, the versions Spring Boot's own build
+  uses. Small style fixes for the new spring-javaformat rules; no behaviour change.
+
 == 4.0.8.1 (2026-10-06)
 
 * First release from the `notify4j-spring-boot` repo, on Spring Boot 4.0.8.

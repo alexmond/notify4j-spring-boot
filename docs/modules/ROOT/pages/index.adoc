@@ -14,8 +14,8 @@ The starter version tracks the Spring Boot version it is built against:
 |===
 | Starter | Spring Boot | notify4j-core
 
-| 4.1.1.x | 4.1.x | 1.1.1
-| 4.0.8.x | 4.0.x | 1.1.1
+| 4.1.3.x | 4.1.x | 1.1.1
+| 4.0.10.x | 4.0.x | 1.1.1
 |===
 
 Starter versions up to `1.1.1` were released from the notify4j repo, on Spring Boot 4.0.
