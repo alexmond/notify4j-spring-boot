@@ -55,7 +55,7 @@
     <properties>
         <!-- The Spring-free core is published from the separate notify4j repo on plain semver;
              this repo tracks the Spring Boot line. Bump when adopting a newer core. -->
-        <notify4j.version>1.1.1</notify4j.version>
+        <notify4j.version>1.2.0</notify4j.version>
 
         <java.version>17</java.version>
         <maven.compiler.release>17</maven.compiler.release>
