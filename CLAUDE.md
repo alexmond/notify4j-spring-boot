@@ -26,7 +26,7 @@ Follows the sibling Boot-starter standard (`spring-boot-config-json-schema`,
 - **Version = `<boot-version>.<revision>`** (e.g. `4.1.1.1` on Boot 4.1.1). The revision starts
   at **1** and resets to 1 on each new Boot patch.
 - **`main` is always the latest Spring Boot line.** Older lines live on `<major>.<minor>`
-  branches (currently `4.0`).
+  branches (currently `4.1` and `4.0`).
 - When `main` moves to a new Boot **minor**, cut the outgoing line to its own branch first.
 - A fix that applies to every line goes to each branch, one PR each.
 - Update the compatibility table in `README.adoc` and `docs/modules/ROOT/pages/index.adoc` on
