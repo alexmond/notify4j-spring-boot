@@ -24,7 +24,7 @@ The starter version tracks the Spring Boot version it is built against:
 |===
 | Starter | Spring Boot | notify4j-core | Branch
 
-| 4.1.3.x | 4.1.x | 1.1.1 | `main`
+| 4.1.3.x | 4.1.x | 1.2.0 | `main`
 | 4.0.10.x | 4.0.x | 1.1.1 | `4.0`
 |===
 
